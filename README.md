@@ -41,7 +41,7 @@ Your screen should be like that
 
 ## Troubleshooting
 
-If you have issue like this want
+If you have issue like this one
 
     clickhouse-client
     ClickHouse client version 1.1.54383.
