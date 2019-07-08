@@ -44,9 +44,9 @@ Your screen should be like that
 If you have issue like this one
 
     clickhouse-client
-    ClickHouse client version 1.1.54383.
-    Connecting to localhost:9000.
-    Code: 102. DB::NetException: Unexpected packet from server localhost:9000, ::1 (expected Hello or Exception, got Unknown packet)
+    ClickHouse client version 19.9.3.31 (official build).
+    Connecting to localhost:9000 as user default.
+    Code: 210. DB::NetException: Connection refused (localhost:9000, 127.0.0.1)
 
 Please add the create a new config file in this folder:
 
