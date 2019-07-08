@@ -48,14 +48,16 @@ If you have issue like this one
     Connecting to localhost:9000 as user default.
     Code: 210. DB::NetException: Connection refused (localhost:9000, 127.0.0.1)
 
-Please add the create a new config file in this folder:
+You may want to check log file in
+    
+    /var/log/clickhouse-server/stderr.log
+    
+    Logging trace to /var/log/clickhouse-server/clickhouse-server.log
+    Logging errors to /var/log/clickhouse-server/clickhouse-server.err.log
+    Poco::Exception. Code: 1000, e.code() = 0, e.displayText() = Exception: Could not determine local time zone: custom time zone file used. (version 19.9.3.31 (official build))
 
-    /etc/clickhouse-server/config.d/config.xml
-
-    <?xml version="1.0"?>
-    <yandex>
-        <listen_host>::1</listen_host>
-        <listen_host>127.0.0.1</listen_host>
-    </yandex>
-
+If the error about local timezone, you just use this for setup proper timezone in your machine.
+    
+    sudo dpkg-reconfigure tzdata
+    
 You are good to go!
